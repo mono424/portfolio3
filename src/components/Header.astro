@@ -1,0 +1,102 @@
+---
+interface Props {
+	src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<div class="wrap">
+    <div data-tilt class="inner-wrap">
+      <div class="box title">
+        <slot name="title"></slot>
+      </div>
+      <div class="box image" style={ `background-image: url(${src});` }></div>
+    </div>
+    <div class="box text">
+      <slot name="text"></slot>
+    </div>
+</div>
+
+
+<script>
+  import VanillaTilt from 'vanilla-tilt';
+  const elements = document.querySelectorAll("[data-tilt]");
+  VanillaTilt.init([...elements] as HTMLElement[]);
+</script>
+
+<style>
+@media screen and (max-width: 570px) {
+  .wrap {
+    width: 350px !important;
+    margin: 20px auto 100px auto !important;
+  }
+
+  .inner-wrap {
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  .box {
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  .box.title {
+    padding: 228px 20px 0 20px !important;
+    background: #FFFFFA;
+  }
+
+}
+
+.wrap {
+  width: 520px;
+  margin: 80px auto 220px auto;
+}
+
+.inner-wrap {
+  position: relative;
+  width: 520px;
+  height: 520px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) scale(0.1);
+}
+
+.box.text {
+  padding-top: 20px;
+  box-sizing: border-box;
+  height: auto;
+  color: white;
+  transform: translateZ(-10px);
+}
+
+.box {
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+}
+
+.box.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  transform: translateZ(30px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.box.image:hover, .box.image:active, .box.image:focus {
+  filter: grayscale(0);
+}
+
+.box.title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 310px 30px 0 30px;
+  background: #FFFFFA;
+}
+</style>

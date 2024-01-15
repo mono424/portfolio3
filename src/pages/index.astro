@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import HeadBar from '../components/HeadBar.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+    <HeadBar />
+	  <Header src="/img/me.jpg">
+      <div slot="title">
+        <h1><b>Khadim</b> Fall</h1>
+        <p>Web Developer & Tech Enthusiast</p>
+      </div>
+
+      <div slot="text">
+        <div class="hello-hw"></div>
+        <p class="hello-text">
+          I am a Web and App Developer, Tech-Enthusiast and Maker, Photographer and Thinker based in Munich.
+          <br><br>
+          You can find me on social media:
+        </p>
+        <div class="social">
+          <a target="_blank" href="https://www.linkedin.com/in/khadim-fall-137850127/"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a>
+          <a target="_blank" href="https://www.instagram.com/khadim0602/"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
+          <a target="_blank" href="https://github.com/mono424"><font-awesome-icon :icon="['fab', 'github']" /></a>
+        </div>
+        <p class="hello-text">
+          Or drop me a mail: <a href="mailto:info@khadimfall.com">info@khadimfall.com</a>
+        </p>
+      </div>
+		</Header>
+
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 16px !important;
+  }
+  p {
+    font-size: 12px !important;
+  }
+
+  p.hello-text {
+    font-size: 14px !important;
+  }
+
+  .social > a {
+    font-size: 22px !important;
+  }
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hello-hw {
+  width: 100px;
+  height: 40px;
+  background-image: url(/img/hello_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  margin: 30px 0 16px 0;
+}
+
+.hello-text {
+  color: #fffffa7c;
+  /* text-align: justify; */
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.social {
+  display: flex;
+}
+
+.social > a {
+  color: #B75D69;
+  margin: 12px 18px 12px 4px;
+  font-size: 24px;
+}
+
+a {
+  color: #B75D69;
+  text-decoration: none;
+}
+</style>
