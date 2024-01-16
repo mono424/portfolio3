@@ -1,0 +1,26 @@
+---
+import Window from './Window.astro';
+
+interface Props {
+}
+
+const {} = Astro.props;
+---
+
+<Window title="portfolio.yaml" class="opacity-35">
+	<div id="container" class="h-full">
+	</div>
+</Window>
+
+<script>
+import * as monaco from "monaco-editor";
+var editor = monaco.editor.create(document.getElementById("container") as HTMLElement, {
+	value: "// First line\nfunction hello() {\n\talert('Hello world!');\n}\n// Last line",
+	language: "javascript",
+	lineNumbers: "off",
+	roundedSelection: false,
+	scrollBeyondLastLine: false,
+	readOnly: false,
+	theme: "hc-light",
+});
+</script>

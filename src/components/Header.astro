@@ -7,7 +7,7 @@ const { src } = Astro.props;
 ---
 
 <div class="wrap">
-    <div data-tilt class="inner-wrap">
+    <div data-tilt data-tilt-max="10" class="inner-wrap">
       <div class="box title">
         <slot name="title"></slot>
       </div>
@@ -17,13 +17,6 @@ const { src } = Astro.props;
       <slot name="text"></slot>
     </div>
 </div>
-
-
-<script>
-  import VanillaTilt from 'vanilla-tilt';
-  const elements = document.querySelectorAll("[data-tilt]");
-  VanillaTilt.init([...elements] as HTMLElement[]);
-</script>
 
 <style>
 @media screen and (max-width: 570px) {
