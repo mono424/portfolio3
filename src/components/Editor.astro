@@ -14,16 +14,17 @@ const {} = Astro.props;
 
 <script>
 import * as monaco from "monaco-editor";
+import portfolio from "../data/portfolio.json";
 var editor = monaco.editor.create(document.getElementById("container") as HTMLElement, {
-	value: "// First line\nfunction hello() {\n\talert('Hello world!');\n}\n// Last line",
-	language: "javascript",
-	lineNumbers: "off",
+	value: portfolio.content,
+	language: "yaml",
+	lineNumbers: "on",
 	roundedSelection: false,
-	scrollBeyondLastLine: false,
+	scrollBeyondLastLine: true,
 	readOnly: false,
 	theme: "hc-light",
 	scrollbar: {
-		handleMouseWheel: false
+		handleMouseWheel: false,
 	}
 });
 
