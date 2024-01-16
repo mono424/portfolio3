@@ -7,7 +7,7 @@ interface Props {
 const {} = Astro.props;
 ---
 
-<Window title="portfolio.yaml" class="opacity-35">
+<Window title="portfolio.yaml">
 	<div id="container" class="h-full">
 	</div>
 </Window>
@@ -22,5 +22,24 @@ var editor = monaco.editor.create(document.getElementById("container") as HTMLEl
 	scrollBeyondLastLine: false,
 	readOnly: false,
 	theme: "hc-light",
+	scrollbar: {
+		handleMouseWheel: false
+	}
+});
+
+editor.onDidFocusEditorText(() => {
+	editor.updateOptions({
+		scrollbar: {
+			handleMouseWheel: true
+		}
+	});
+});
+
+editor.onDidBlurEditorText(() => {
+	editor.updateOptions({
+		scrollbar: {
+			handleMouseWheel: false
+		}
+	});
 });
 </script>
