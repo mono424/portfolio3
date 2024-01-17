@@ -1,0 +1,11 @@
+---
+import 'devicon/devicon.min.css';
+
+interface Props {
+    icon: string;
+}
+
+const { icon } = Astro.props;
+---
+
+<i class={"devicon-" + icon}></i>

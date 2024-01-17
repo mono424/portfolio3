@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Editor from '../components/Editor.astro';
 import HeadBar from '../components/HeadBar.astro';
 import Header from '../components/Header.astro';
+import Slider from '../components/Slider.astro';
+import LangCard from '../components/LangCard.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -31,7 +33,34 @@ import Header from '../components/Header.astro';
         </p>
       </div>
 		</Header>
-
+    <div class="mb-12">
+      <Slider>
+        <!-- Languages and Frameworks -->
+        <LangCard icon="go-plain" />
+        <LangCard icon="javascript-plain" />
+        <LangCard icon="typescript-plain" />
+        <LangCard icon="dart-plain" />
+        <LangCard icon="rust-plain" />
+        <LangCard icon="lua-plain" />
+        <LangCard icon="tailwindcss-plain" />
+        <LangCard icon="storybook-plain" />
+        <LangCard icon="flutter-plain" />
+        <LangCard icon="vuejs-plain" />
+        <LangCard icon="nextjs-original" />
+        <LangCard icon="svelte-plain" />
+      </Slider>
+      <Slider reverse>
+        <LangCard icon="postgresql-plain" />
+        <LangCard icon="mongodb-plain" />
+        <LangCard icon="docker-plain" />
+        <LangCard icon="kubernetes-plain" />
+        <LangCard icon="k3s-plain" />
+        <LangCard icon="neo4j-plain" />
+        <LangCard icon="terraform-plain" />
+        <LangCard icon="googlecloud-plain" />
+        <LangCard icon="github-original" />
+      </Slider>
+    </div>
 		<Editor />
 	</main>
 </Layout>
