@@ -5,6 +5,7 @@ import HeadBar from '../components/HeadBar.astro';
 import Header from '../components/Header.astro';
 import Slider from '../components/Slider.astro';
 import LangCard from '../components/LangCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -60,6 +61,14 @@ import LangCard from '../components/LangCard.astro';
         <LangCard icon="googlecloud-plain" />
         <LangCard icon="github-original" />
       </Slider>
+    </div>
+    <div class="mb-12 grid grid-cols-3 gap-12 container mx-auto">
+      <ProjectCard title="test" />
+      <ProjectCard title="test" />
+      <ProjectCard title="test" />
+      <ProjectCard title="test" />
+      <ProjectCard title="test" />
+      <ProjectCard title="test" />
     </div>
 		<Editor />
 	</main>
