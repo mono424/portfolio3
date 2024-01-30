@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Editor from '../components/Editor.astro';
 import HeadBar from '../components/HeadBar.astro';
-import Header from '../components/Header.astro';
+import TypedHeader from '../components/TypedHeader.astro';
 import Slider from '../components/Slider.astro';
 import LangCard from '../components/LangCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
@@ -11,30 +11,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 <Layout title="Welcome to Astro.">
 	<main class="pb-96">
     <HeadBar />
-	  <Header src="/img/me.jpg">
-      <div slot="title">
-        <h1><b>Khadim</b> Fall</h1>
-        <p>Web Developer & Tech Enthusiast</p>
-      </div>
-
-      <div slot="text">
-        <div class="hello-hw"></div>
-        <p class="hello-text">
-          I am a Web and App Developer, Tech-Enthusiast and Maker, Photographer and Thinker based in Munich.
-          <br><br>
-          You can find me on social media:
-        </p>
-        <div class="social">
-          <a target="_blank" href="https://www.linkedin.com/in/khadim-fall-137850127/"><font-awesome-icon :icon="['fab', 'linkedin-in']" /></a>
-          <a target="_blank" href="https://www.instagram.com/khadim0602/"><font-awesome-icon :icon="['fab', 'instagram']" /></a>
-          <a target="_blank" href="https://github.com/mono424"><font-awesome-icon :icon="['fab', 'github']" /></a>
-        </div>
-        <p class="hello-text">
-          Or drop me a mail: <a href="mailto:info@khadimfall.com">info@khadimfall.com</a>
-        </p>
-      </div>
-		</Header>
-    <div class="mb-12">
+	  <TypedHeader />
+    <div class="my-12">
       <Slider>
         <!-- Languages and Frameworks -->
         <LangCard icon="go-plain" />

@@ -1,0 +1,48 @@
+---
+interface Props {
+}
+
+const {  } = Astro.props;
+---
+
+<div class="container mx-auto text-white">
+    <h1 class="text-3xl font-bold mb-3">
+      Hey, I'm Khadim
+    </h1>
+    <h2 class="text-3xl font-bold mb-3">
+      <span id="intro1"></span>
+    </h2>
+
+    <p class="text-xl mb-1 font-light">I'm a full-stack developer based in Munich 🇩🇪</p>
+    <p class="text-xl mb-1 font-light">Currently I am pursuing a Bachelor's degree in Informatics at the Technical University of Munich.</p>
+    <p class="text-xl mb-1 font-light">Meanwhile I am working as freelancer and building my own products.</p>
+    <p class="text-xl mb-1 font-light">I am passionate about building software that is scalable, maintainable and user-friendly.</p>
+</div>
+
+<script>
+import Typed from 'typed.js';
+const typed1 = new Typed('#intro1', {
+  strings: [
+    "I love to work with Typescript",
+    "I love to work with Go",
+    "I love to work with Tailwind",
+    "I love to work with Next.js",
+    "I love to work with Flutter",
+    "I love to work with React",
+    "I love to work with Dart",
+    "I love to work with Docker",
+    "I love to work with Google Cloud Platform",
+    "I love to work with AWS",
+    "I love to work with Kubernetes",
+    "I love to work with Postgres",
+    "I love to work with MongoDB",
+    "I love to work with Terraform",
+    "I love to work with Rust",
+    "I love to work with GitHub",
+    "I love to work with Neo4j",
+    "I love to work with Svelte",
+    "I love to learn all about new technologies!",
+  ],
+  typeSpeed: 30,
+});
+</script>
