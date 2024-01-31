@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: "class",
 	theme: {
 		extend: {
+			backgroundImage: theme => ({
+				'gradient-dark':  'linear-gradient(#1b1c39 1px, transparent 1px), linear-gradient(to right, #1b1c39 1px, #13151a 1px)',
+				'gradient-light':  'linear-gradient(#d1dcf6 1px, transparent 1px), linear-gradient(to right, #d1dcf6 1px, #c8d4ef 1px)'
+			}),
 			colors: {
 				background0: "#13151a",
 				background1: "#2D3250",
