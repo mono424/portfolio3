@@ -6,6 +6,7 @@ import TypedHeader from '../components/TypedHeader.astro';
 import Slider from '../components/Slider.astro';
 import LangCard from '../components/LangCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+const coverSrc = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -41,12 +42,12 @@ import ProjectCard from '../components/ProjectCard.astro';
       </Slider>
     </div>
     <div class="mb-12 grid grid-cols-3 gap-12 container mx-auto">
-      <ProjectCard title="test" />
-      <ProjectCard title="test" />
-      <ProjectCard title="test" />
-      <ProjectCard title="test" />
-      <ProjectCard title="test" />
-      <ProjectCard title="test" />
+      <ProjectCard coverSrc="/portfolio3/cover/wp.jpg" title="WhitePawn" />
+      <ProjectCard coverSrc={coverSrc} title="test" />
+      <ProjectCard coverSrc={coverSrc} title="test" />
+      <ProjectCard coverSrc={coverSrc} title="test" />
+      <ProjectCard coverSrc={coverSrc} title="test" />
+      <ProjectCard coverSrc={coverSrc} title="test" />
     </div>
 		<Editor />
 	</main>
