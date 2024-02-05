@@ -1,3 +1,7 @@
+const {
+	default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -9,6 +13,7 @@ export default {
 				'gradient-light':  'linear-gradient(#d1dcf6 1px, transparent 1px), linear-gradient(to right, #d1dcf6 1px, #c8d4ef 1px)'
 			}),
 			colors: {
+				backgroundDark: "#0d0d0d",
 				background0: "#13151a",
 				background1: "#2D3250",
 				background2: "#424769",
@@ -31,5 +36,16 @@ export default {
 			}    
 		},
 	},
-	plugins: [],
+	plugins: [addVariablesForColors],
 }
+
+function addVariablesForColors({ addBase, theme }) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+	  Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+   
+	addBase({
+	  ":root": newVars,
+	});
+  }
