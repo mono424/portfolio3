@@ -9,16 +9,23 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: theme => ({
-				'gradient-dark':  'linear-gradient(#1b1c39 1px, transparent 1px), linear-gradient(to right, #1b1c39 1px, #13151a 1px)',
-				'gradient-light':  'linear-gradient(#d1dcf6 1px, transparent 1px), linear-gradient(to right, #d1dcf6 1px, #c8d4ef 1px)'
+				'gradient-dark':  'linear-gradient(#efece908 1px, transparent 1px), linear-gradient(to right, #efece908 1px, transparent 1px)',
+				'gradient-light':  'linear-gradient(#3c575817 1px, transparent 1px), linear-gradient(to right, #3c575817 1px, transparent 1px)'
 			}),
 			colors: {
-				backgroundDark: "#0d0d0d",
-				background0: "#13151a",
-				background1: "#2D3250",
-				background2: "#424769",
-				background3: "#7077A1",
-				primary: "#F6B17A",
+				darkBlue: "#1a2523",
+				darkGreen: "#3c5758",
+				midGreen: "#949d8f",
+				lightGreen: "#d1ebdb",
+				lighterGreen: "#d0d5ce",
+				beige: "#efece9",
+
+				backgroundDark: "#1a2523",
+				background0: "#d0d5ce",
+				background1: "#efece9",
+				background2: "#efece9",
+				background3: "#efece9",
+				primary: "#d1ebdb",
 			},
 			animation: {
 				'infinite-scroll': 'infinite-scroll 25s linear infinite',
